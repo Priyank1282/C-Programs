@@ -1,26 +1,22 @@
-#include <stdio.h>
-int main() {
-    int i, space, rows, k = 0, count = 0, count1 = 0;
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
-    for (i = 1; i <= rows; ++i) {
-        for (space = 1; space <= rows - i; ++space) {
-            printf("  ");
-            ++count;
-        }
-        while (k != 2 * i - 1) {
-            if (count <= rows - 1) {
-                printf("%d ", i + k);
-                ++count;
-            } 
-            else {
-                ++count1;
-                printf("%d ", (i + k - 2 * count1));
-            }
-            ++k;
-        }
-        count1 = count = k = 0;
-        printf("\n");
-    }
-}
+#include<stdio.h>
 
+
+int main(){
+    int a,b,c;
+    printf("Enter 1st side of trinagle:");
+    scanf("%i",&a);
+    printf("Enter 2nd side of trinagle:");
+    scanf("%i",&b);
+    printf("Enter 3rd side of trinagle:");
+    scanf("%i",&c);
+    if(a==b && b==c)
+    {
+        printf("Triangle with sides %i %i %i is Equilateral triangle",a,b,c);
+    }
+    else if (a==b || b==c || a==c)
+    {
+        printf("Triangle with sides %i %i %i is Isosceles triangle",a,b,c);
+    }
+    else
+        printf("Triangle with sides %i %i %i is Scalence triangle",a,b,c);
+}
