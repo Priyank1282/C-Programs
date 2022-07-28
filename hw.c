@@ -1,0 +1,1 @@
+//praticla question 1 to 21(page-8)
